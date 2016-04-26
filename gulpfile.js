@@ -44,6 +44,11 @@ gulp.task('fonts', function() {
   	.pipe(gulp.dest('build/fonts'));
 });
 
+gulp.task('libs', function() {
+  return gulp.src('src/libs/**/*')
+  	.pipe(gulp.dest('build/libs'));
+});
+
 gulp.task('initBrowserSync', function() {
   browserSync.init({
     server: {
@@ -62,6 +67,6 @@ gulp.task('watch', ['initBrowserSync', 'jade', 'stylus', 'move-index'], function
 });
 
 gulp.task('update', ['move-index', 'jade', 'stylus']);
-gulp.task('default', ['clean', 'fonts', 'initBrowserSync', 'watch', 'update']);
+gulp.task('default', ['clean', 'fonts', 'libs', 'initBrowserSync', 'watch', 'update']);
 
 
