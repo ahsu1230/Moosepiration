@@ -3,8 +3,11 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
+var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var del = require('del');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 
 gulp.task('clean', function() {
 	return del.sync('build');
@@ -31,14 +34,6 @@ gulp.task('stylus', function() {
 	}));
 });
 
-gulp.task('move-index', function() {
-	return gulp.src('src/index.html')
-		.pipe(gulp.dest('build'))
-		.pipe(browserSync.reload({
-			stream:true
-		}));
-});
-
 gulp.task('fonts', function() {
   return gulp.src('src/fonts/**/*')
   	.pipe(gulp.dest('build/fonts'));
@@ -49,6 +44,21 @@ gulp.task('libs', function() {
   	.pipe(gulp.dest('build/libs'));
 });
 
+gulp.task('js', function() {
+  return gulp.src('src/**/*.js')
+    // .pipe(uglify())
+  	.pipe(gulp.dest('build'))
+  	.pipe(browserSync.reload({
+		stream:true
+	}));
+});
+
+gulp.task('icons', function(){
+  return gulp.src('src/icons/**/*.+(png|jpg|gif|svg)')
+  .pipe(cache(imagemin()))
+  .pipe(gulp.dest('build/icons'))
+});
+
 gulp.task('initBrowserSync', function() {
   browserSync.init({
     server: {
@@ -57,16 +67,15 @@ gulp.task('initBrowserSync', function() {
   })
 });
 
-gulp.task('watch', ['initBrowserSync', 'jade', 'stylus', 'move-index'], function () {
+gulp.task('watch', ['initBrowserSync', 'jade', 'stylus'], function () {
   gulp.watch('src/**/*.jade', ['jade']);
   gulp.watch('src/**/*.styl', ['stylus']);
-  gulp.watch('src/index.html', ['move-index']);
-  gulp.watch('src/**/*.html', browserSync.reload);
-  gulp.watch('src/**/*.css', browserSync.reload);
-  gulp.watch('src/**/*.js', browserSync.reload);
+  gulp.watch('src/**/*.js', ['js']);
+  // gulp.watch('src/**/*.html', browserSync.reload);
+  // gulp.watch('src/**/*.css', browserSync.reload);
 });
 
-gulp.task('update', ['move-index', 'jade', 'stylus']);
-gulp.task('default', ['clean', 'fonts', 'libs', 'initBrowserSync', 'watch', 'update']);
+gulp.task('update', ['jade', 'stylus']);
+gulp.task('default', ['clean', 'js', 'fonts', 'libs', 'icons', 'initBrowserSync', 'watch', 'update']);
 
 

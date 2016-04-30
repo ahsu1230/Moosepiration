@@ -1,9 +1,1 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="out.css">
-		<script type="text/javascript" src="libs/jquery-2.2.3.js"></script>
-	</head>
-	<body>
-		<h1>Hi Moose red2</h1>
-	</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><title></title><link rel="stylesheet" href="out.css"><script type="text/javascript" src="libs/jquery-2.2.3.min.js"></script><script type="text/javascript" src="libs/lodash-v411-1.js"></script><script type="text/javascript" src="libs/angular.min.js"></script><script type="text/javascript" src="js/main.js"></script><script type="text/javascript" src="js/spinner1.js"></script></head><body ng-app="myApp" ng-controller="MainCtrl"><div class="header"><div class="header-logo-wrapper">Moospiration</div></div><div class="search-bar-wrapper"><img src="icons/search-gray.png" class="search-icon"><input type="text" placeholder="Search for an animation" ng-model="query"></div><div ng-repeat="anim in animations | filter:search" class="main-content-wrapper"><div class="animation-wrapper"><div class="title">{{anim.title}}</div><button ng-click="selectAnimation(anim)" class="btn-start-anim">Load</button><img ng-src="{{anim.imageSrc}}"><div ng-click="extendDescription($event)" class="description-wrapper"> <p>{{anim.description}}</p></div></div></div><div class="modal-overlay"><div ng-if="selectedAnimation.id=='spinner1'" ahsu-spinner1 class="modal-wrapper"></div><div ng-if="selectedAnimation.id=='google'" ahsu-spinner1 class="modal-wrapper"></div><div ng-if="selectedAnimation.id=='apple'" ahsu-spinner1 class="modal-wrapper"></div><div ng-if="selectedAnimation" class="modal-overlay-header"><div class="modal-overlay-logo">{{selectedAnimation.title}}<button ng-click="closeModal()" class="close">Close</button><button ng-click="resetAnimation()" class="reset">Reset</button></div></div></div></body></html>
