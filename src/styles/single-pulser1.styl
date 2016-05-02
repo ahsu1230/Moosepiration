@@ -1,0 +1,49 @@
+widthIndicatorPx = 36px
+heightIndicatorPx = 36px
+
+ahsu-single-pulser1-wrapper
+.ahsu-single-pulser1-wrapper
+	width: 300px
+
+	& .ahsu-single-pulser1
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: widthIndicatorPx
+		height: heightIndicatorPx
+		background-color: #03a9f4
+		border-radius: 50%
+		opacity: 1.0
+		visibility: visible
+		transition: opacity 0.15s linear, visibility 0.15s linear
+
+		&.hide
+			opacity: 0.0
+			visibility: hidden
+
+	  	& .ahsu-pulser1
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			border-radius: 50%
+			border: 0px solid #fff			
+			animation: ahsu-pulse1 1000ms ease-out forwards infinite
+		
+
+@keyframes ahsu-pulse1 {
+	0% {
+		border: 0px solid #fff
+	}
+	20% {
+		border: 8px solid #fff
+		width: 0%
+		height: 0%
+	}
+	100% {
+		border: 8px solid #fff
+		width: widthIndicatorPx
+		height: heightIndicatorPx
+	}
+}

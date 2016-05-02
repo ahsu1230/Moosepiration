@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><title></title><link rel="stylesheet" href="out.css"><script type="text/javascript" src="libs/jquery-2.2.3.min.js"></script><script>$(document).ready(function() {
+	$('button').click(function() {
+
+		/////////////// JS ///////////////
+		var target = $('.ahsu-spinner1-wrapper img');
+		target.addClass('spin-back');
+		setTimeout(function() {
+			target.addClass('spin-forward-fast');
+			setTimeout(function() {
+				$('.ahsu-loading-spinner1-wrapper').addClass('disappear');
+				$('.view-to-show').addClass('show');
+			}, 800);
+		}, 1100);
+		//////////////////////////////////
+
+	});
+});
+</script></head><body><h1>Sample with CSS</h1><button>start</button><div class="modal-overlay"><div class="modal-wrapper"><!-- START--><div class="ahsu-spinner1-wrapper"><div class="ahsu-loading-spinner1-wrapper"><h3>Loading...</h3><img src="icons/spinner-orange.png"></div><div class="view-to-show"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p></div></div><!-- END--></div></div></body></html>

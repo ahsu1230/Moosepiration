@@ -1,0 +1,48 @@
+ahsu-progress-bar1-wrapper
+.ahsu-progress-bar1-wrapper
+	position: relative
+	width: 300px
+
+.ahsu-progress-bar1
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	opacity: 1.0
+	visibility: visible
+	transition: all 0.1s linear
+	
+	&.hide
+		transform: translate(-50%, -80%)
+		opacity: 0.0
+		visibility: hidden
+
+	& h3
+		text-align: center
+	
+	& .ahsu-bar
+		width: 280px
+		height: 24px
+		margin-bottom: 24px
+		border-radius: 12px
+		background-color: #c8c8c8
+		overflow: hidden
+
+		& .ahsu-progress
+			width: 0%
+			height: 24px
+			background-color: #329B2E
+
+	& img
+		position: relative
+		left: 50%
+		transform: translate(-50%, 100%)
+		width: 24px
+		opacity: 0.0
+		visibility: hidden
+		transition: all 0.15s linear
+
+		&.show
+			transform: translate(-50%, 0%)
+			opacity: 1.0
+			visibility: visible

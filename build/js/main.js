@@ -41,16 +41,40 @@ app.controller("MainCtrl", ['$scope', function ($scope) {
 			description: "Some orange clock spinner that sets back counter-clockwise and then accelerates clock-wise. Good for animations that load longer.",
 		},
 		{
-			id: 'google',
-			title: 'Google Loader',
+			id: 'circle_filler',
+			title: 'Circle Filler',
 			imageSrc: 'icons/spinner-orange.png',
-			description: "The same loader as Google. Use for any Google-related loading.",
+			description: "Circle Filler.",
 		},
 		{
-			id: 'apple',
-			title: 'Apple Loader',
+			id: 'circle_filler_color',
+			title: 'Circle Filler with color',
 			imageSrc: 'icons/spinner-orange.png',
-			description: "The same loader as the Apple Macbook. Use for any Apple-related loading.",
+			description: "Circle Filler.",
+		},
+		{
+			id: 'progress_bar1',
+			title: 'Progress Bar 1',
+			imageSrc: 'icons/spinner-orange.png',
+			description: "A loading bar with a green progress filler. Great for general usage!",
+		},
+		{
+			id: 'single_pulser1',
+			title: 'Single Pulser 1',
+			imageSrc: 'icons/spinner-orange.png',
+			description: "Loading indicator pulsing",
+		},
+		{
+			id: 'pulser_line1',
+			title: 'Pulser Line 1',
+			imageSrc: 'icons/spinner-orange.png',
+			description: "Loading indicator pulsing",
+		},
+		{
+			id: 'step_list1',
+			title: 'List of Steps 1',
+			imageSrc: 'icons/spinner-orange.png',
+			description: "Loading indicator pulsing",
 		},
 	];
 }]);

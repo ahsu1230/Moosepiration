@@ -1,4 +1,4 @@
-app.directive("ahsuSpinner1", function() {
+app.directive("ahsuLoadingSpinner1", function() {
   return {
   	restrict: 'AE', // only match attribute name ('ahsu-spinner1')
   	replace: 'true',
