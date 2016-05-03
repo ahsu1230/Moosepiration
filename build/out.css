@@ -53,6 +53,100 @@ ahsu-circle-filler-wrapper .ahsu-circle-filler .ahsu-fill-percent,
   color: #888;
 }
 
+ahsu-line-pulser1-wrapper,
+.ahsu-line-pulser1-wrapper {
+  position: relative;
+  width: 300px;
+}
+ahsu-line-pulser1-wrapper .ahsu-line-pulser1,
+.ahsu-line-pulser1-wrapper .ahsu-line-pulser1 {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  margin: 0 auto;
+  opacity: 1;
+  visibility: visible;
+  transition: all linear 0.15s;
+}
+ahsu-line-pulser1-wrapper .ahsu-line-pulser1.hide,
+.ahsu-line-pulser1-wrapper .ahsu-line-pulser1.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1,
+.ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1 {
+  display: inline-block;
+  width: 12px;
+  height: 100%;
+  margin: 0 12px;
+  background-color: #6552ce;
+  border-radius: 50%;
+  animation-name: ahsu-pulse2;
+  animation-duration: 1300ms;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+  animation-timing-function: ease-out;
+}
+ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.first,
+.ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.first {
+  animation-delay: 0ms;
+}
+ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.second,
+.ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.second {
+  animation-delay: 80ms;
+}
+ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.third,
+.ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.third {
+  animation-delay: 160ms;
+}
+ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.fourth,
+.ahsu-line-pulser1-wrapper .ahsu-line-pulser1 .ahsu-pulser1.fourth {
+  animation-delay: 240ms;
+}
+@-moz-keyframes ahsu-pulse2 {
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes ahsu-pulse2 {
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@-o-keyframes ahsu-pulse2 {
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes ahsu-pulse2 {
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
 @font-face {
   font-family: 'Roboto-Regular';
   src: url("fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf");

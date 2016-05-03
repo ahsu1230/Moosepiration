@@ -1,0 +1,54 @@
+ahsu-line-pulser1-wrapper
+.ahsu-line-pulser1-wrapper
+	position: relative
+	width: 300px
+
+	.ahsu-line-pulser1
+		display: inline-block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		height: 12px
+		margin: 0 auto
+		opacity: 1.0
+		visibility: visible
+		transition: all linear 0.15s
+
+		&.hide
+			opacity: 0.0
+			visibility: hidden
+
+		& .ahsu-pulser1
+			display: inline-block
+			width: 12px
+			height: 100%
+			margin: 0 12px
+			background-color: #6552CE
+			border-radius: 50%
+			animation-name: ahsu-pulse2
+			animation-duration: 1300ms
+			animation-iteration-count: infinite
+			animation-direction: forwards
+			animation-timing-function: ease-out
+
+			&.first
+				animation-delay: 0ms
+			&.second
+				animation-delay: 80ms
+			&.third
+				animation-delay: 160ms
+			&.fourth
+				animation-delay: 240ms
+
+
+@keyframes ahsu-pulse2 {
+	50% {
+		opacity: 1.0
+		transform: scale(1.1)
+	}
+	100% {
+		opacity: 0.0
+		transform: scale(1.0)
+	}
+}
