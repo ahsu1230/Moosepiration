@@ -49,8 +49,8 @@ gulp.task('js', function() {
     // .pipe(uglify())
   	.pipe(gulp.dest('build'))
   	.pipe(browserSync.reload({
-		stream:true
-	}));
+		  stream:true
+    }));
 });
 
 gulp.task('icons', function(){

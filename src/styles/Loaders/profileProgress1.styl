@@ -1,0 +1,92 @@
+colorProgress = #5496ff
+colorHighlight = rgb(111,211,107)
+
+ahsu-profile-progress1-wrapper
+.ahsu-profile-progress1-wrapper
+	position: relative
+	width: 300px
+	text-align: center
+
+	h3
+		opacity: 1.0
+		visibility: visible
+		transition: all linear 0.1s
+
+		&.hide
+			opacity: 0.0
+			visibility: hidden
+
+	.ahsu-profile-wrapper
+		position: relative
+		transform: translateY(50%)
+		overflow: hidden
+		transition: all linear 0.15s
+
+		&.ahsu-move
+			transform: translateY(0%)
+
+	.ahsu-profile-progress
+		position: relative
+		width: 120px
+		height: 120px
+		margin: 5px auto
+		border-radius: 50%
+		background-color: colorProgress
+		transition: all linear 0.15s
+
+		&.ahsu-done
+			background-color: colorHighlight
+			animation-name: ahsu-profile-progress-highlight
+			animation-delay: 0ms
+			animation-duration: 250ms
+			animation-direction: forwards
+			animation-timing-function: linear
+
+		& img
+			position: absolute
+			top: 4px
+			left: 4px
+			width: calc(100% - 8px)
+			height: calc(100% - 8px)
+			border-radius: 50%
+			-webkit-filter: grayscale(50%)
+			filter: grayscale(50%)
+			transition: all linear 0.15s
+
+			&.full
+				-webkit-filter: grayscale(0%)
+				filter: grayscale(0%)
+
+
+		& .ahsu-hider
+			position: absolute
+			background-color: white
+
+			&.top-left
+				top: 0%			/* move this to -100% */
+				left: 0
+				width: 50%
+				height: 50%
+
+			&.bottom-left
+				bottom: 0 		
+				left: 0%		/* move this to -50% */
+				width: 50%
+				height: 50%
+
+			&.right
+				top: 0% 		/* move this to 100% */
+				right: 0
+				width: 50%
+				height: 100%
+
+
+@keyframes ahsu-profile-progress-highlight {
+	50% {
+		box-shadow: 0px 0px 2px 2px colorHighlight
+	}
+	100% {
+		box-shadow: 0px 0px 0px 0px colorHighlight
+	}
+}
+

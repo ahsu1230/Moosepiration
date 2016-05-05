@@ -1,0 +1,25 @@
+.view.loaders
+	.search-bar-wrapper
+		img.search-icon(src='icons/search-gray.png')
+		input(type='text' placeholder='Search for an animation' ng-model="query")
+
+	.main-content-wrapper(ng-repeat="anim in animations | filter:search")
+		.animation-wrapper
+			.title {{anim.title}}
+			button.btn-start-anim(ng-click="selectAnimation(anim)") Load
+			img.animation-icon(ng-src="{{anim.imageSrc}}")
+			.description-wrapper(ng-click="extendDescription($event)") 
+				p {{anim.description}}
+
+	.modal-overlay
+		.modal-wrapper(ng-if="selectedAnimation.id=='spinner1'" ahsu-loading-spinner1)
+		.modal-wrapper(ng-if="selectedAnimation.id=='circle_filler'" ahsu-loading-circle-filler)
+		.modal-wrapper(ng-if="selectedAnimation.id=='progress_bar1'" ahsu-loading-progress-bar1)
+		.modal-wrapper(ng-if="selectedAnimation.id=='single_pulser1'" ahsu-loading-single-pulser1)
+		.modal-wrapper(ng-if="selectedAnimation.id=='line_pulser1'" ahsu-loading-line-pulser1)
+		.modal-wrapper(ng-if="selectedAnimation.id=='profile_progress1'" ahsu-loading-profile-progress1)
+		.modal-wrapper(ng-if="selectedAnimation.id=='step_list1'" ahsu-loading-step-list1)
+		.modal-overlay-header(ng-if="selectedAnimation")
+			.modal-overlay-logo {{selectedAnimation.title}}
+				button.close(ng-click="closeModal()") Close
+				button.reset Reset

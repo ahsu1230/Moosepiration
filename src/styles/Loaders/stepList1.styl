@@ -1,0 +1,112 @@
+colorBlue = rgba(0, 40, 104, 1)
+colorBlueOpaque = rgba(0, 40, 104, 0)
+colorLightGreen = #6fd36b
+
+ahsu-step-list1-wrapper
+.ahsu-step-list1-wrapper
+	position: relative
+	width: 400px
+	overflow: hidden
+	background-color: colorBlue
+	color: white
+
+	& .ahsu-list-wrapper
+		opacity: 1.0
+		visibility: visible
+		transition: all 0.15s easeInOut
+
+		&.hide
+			opacity: 0.0
+			visibility: hidden
+
+		& ul
+			position: absolute
+			top: 10%
+			left: 50%
+			transform: translate(-50%, 0%)
+			width: 360px
+			padding: 0px
+			list-style: none
+			transition: all 1s easeInOut
+
+		& li
+			color: gray
+			height: 60px
+			opacity: 0.6
+			transition: all linear 0.15s
+
+			&.ahsu-highlighted
+				color: white
+				opacity: 1.0
+
+				& .ahsu-icon-wrapper
+					border: 2px solid white
+
+			&.ahsu-completed
+				color: colorLightGreen
+
+				& .ahsu-icon-wrapper
+					background-color: colorLightGreen
+					border: 2px solid colorLightGreen
+					animation-name: ahsu-step-list1-complete
+					animation-duration: 200ms
+					animation-timing-function: linear
+					animation-direction: forwards
+
+				& .ahsu-icon
+					background-image: url('../icons/checkmark-white.png')
+			
+			&.ahsu-past
+				opacity: 0.8
+
+		& h4
+			display: inline-block
+
+		& .ahsu-icon-wrapper
+			display: inline-block
+			vertical-align: middle
+			width: 32px
+			height: 32px
+			margin-right: 12px
+			border-radius: 50%
+			border: 2px solid gray
+			transition: all linear 0.15s
+
+			& .ahsu-icon
+				position: relative
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 18px
+				height: 18px
+				background-image: url('../icons/checkmark-white.png')
+				background-size: cover
+				transition: all linear 0.15s
+
+		& .ahsu-mask
+			position: absolute
+			left: 0px
+			height: 64px
+			width: 100%
+
+			&.above
+				top: 0px
+				background: linear-gradient(to bottom, colorBlue, colorBlueOpaque);
+			&.below
+				bottom: 0px
+				background: linear-gradient(to bottom, colorBlueOpaque, colorBlue);
+
+		& .ahsu-counter
+			position: absolute
+			right: 24px
+			bottom: 24px
+			color: white
+
+@keyframes ahsu-step-list1-complete {
+	50% {
+		transform: scale(1.2)
+	}
+	100% {
+		transform: scale(1.0)
+	}
+}
