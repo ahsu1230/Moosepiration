@@ -5,8 +5,6 @@
 
 	.main-content-wrapper(ng-repeat="anim in animations | filter:search")
 		.animation-wrapper
-			.title {{anim.title}}
-			button.btn-start-anim(ng-click="selectAnimation(anim)") Load
-			img(ng-src="{{anim.imageSrc}}")
-			.description-wrapper(ng-click="extendDescription($event)") 
-				p {{anim.description}}
+			ahsu-accordion-rotating-arrow1(ng-if="anim.id=='rotating_arrow1'" title="anim.title" content="anim.content")
+			ahsu-accordion-plus-button1(ng-if="anim.id=='plus_button1'" title="anim.title" content="anim.content")
+			ahsu-accordion-plus-minus1(ng-if="anim.id=='plus_minus1'" title="anim.title" content="anim.content")

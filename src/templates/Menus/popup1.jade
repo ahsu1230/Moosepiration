@@ -2,5 +2,6 @@
 	button(ng-click="onShowMenu($event)")
 		img(ng-src="{{imgSrc}}")
 	ul
-		li(ng-repeat="item in items")
-			a(ng-href="{{item.href}}") {{item.title}}
+		a(ng-repeat="item in items" ng-href="{{item.href}}" ng-click="onLinkClick($event)")
+			li
+				{{item.title}}

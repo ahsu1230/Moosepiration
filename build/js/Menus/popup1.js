@@ -21,6 +21,13 @@ app.directive("ahsuMenuPopup1", function($timeout) {
         }
       };
 
+      scope.onLinkClick = function($event) {
+        var list = $($event.currentTarget.parentElement);
+        var button = list.siblings();
+        list.removeClass('ahsu-show');
+        button.removeClass('ahsu-active');
+      };
+
       var exampleItems = [
         {
           title: 'Link1',
