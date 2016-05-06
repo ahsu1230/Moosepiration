@@ -75,26 +75,35 @@ body button
 		&:hover
 			text-decoration: none
 
-.main-menu-btn
-	position: absolute
-	right: 0px
-	top: 50%
-	transform: translateY(-50%)
-	width: 36px
-	height: 36px
-	border-radius: 50%
-	background: colorDarkGrayOpaque
-	box-sizing: border-box
-	cursor: pointer
+	& .main-menu-wrapper
+		position: absolute
+		top: 4px
+		right: 0px
 
-	&:hover
-		background: colorDarkGray
+		& button
+			background-color: colorLightBlue
 
-	& img
-		position: relative
-		top: 1px
-		width: 24px
-		height: 24px
+			&.ahsu-active
+			&:hover
+				background-color: colorAction
+
+		& ul
+			border: 2px solid colorAction
+			z-index: 999
+
+		& li
+			background-color: white
+			border-bottom: 1px solid colorAction
+
+			&:hover
+				background-color: colorAction
+
+				& a
+					color: white
+
+			& a
+				color: colorAction
+				font-size: 16px
 
 .search-bar-wrapper
 	position: relative
@@ -178,6 +187,16 @@ body button
 			font-size: 16px
 			opacity: 0.5
 			transition: opacity 0.1s linear
+
+	.ahsu-banner
+		position: absolute
+		top: 36px
+		right: 56px
+	
+	.ahsu-button
+		position: absolute
+		top: 36px
+		right: 56px
 
 .btn-start-anim
 	position: absolute

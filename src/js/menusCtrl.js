@@ -25,7 +25,14 @@ app.controller("MenusCtrl", ['$scope', function ($scope) {
 		{
 			id: 'popup1',
 			title: 'Popup1',
-			description: "Some menu that fades in"
+			description: "Some menu that fades in",
+			type: 'button'
+		},
+		{
+			id: 'banner1',
+			title: 'Banner1',
+			description: "Menu tabs that underline when hover over",
+			type: 'banner'
 		},
 	];
 }]);

@@ -24,13 +24,13 @@ html(lang="en")
 		script(type='text/javascript', src='js/Loaders/stepList1.js')
 
 		script(type='text/javascript', src='js/Menus/popup1.js')
+		script(type='text/javascript', src='js/Menus/banner1.js')
 
 	body(ng-app="myApp")
 		.header
 			.header-logo-wrapper(ng-controller="HeaderCtrl")
 				a(ng-href="#/") Moospiration
-				button.main-menu-btn
-					img(src="icons/menu.png")
+				ahsu-menu-popup1.main-menu-wrapper(items="links")
 
 		.view-wrapper(ng-view)
 			

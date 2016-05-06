@@ -52,26 +52,35 @@ body button {
 .header-logo-wrapper a:hover {
   text-decoration: none;
 }
-.main-menu-btn {
+.header-logo-wrapper .main-menu-wrapper {
   position: absolute;
+  top: 4px;
   right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(102,102,102,0.5);
-  box-sizing: border-box;
-  cursor: pointer;
 }
-.main-menu-btn:hover {
-  background: #666;
+.header-logo-wrapper .main-menu-wrapper button {
+  background-color: #5496ff;
 }
-.main-menu-btn img {
-  position: relative;
-  top: 1px;
-  width: 24px;
-  height: 24px;
+.header-logo-wrapper .main-menu-wrapper button.ahsu-active,
+.header-logo-wrapper .main-menu-wrapper button:hover {
+  background-color: #bf0a30;
+}
+.header-logo-wrapper .main-menu-wrapper ul {
+  border: 2px solid #bf0a30;
+  z-index: 999;
+}
+.header-logo-wrapper .main-menu-wrapper li {
+  background-color: #fff;
+  border-bottom: 1px solid #bf0a30;
+}
+.header-logo-wrapper .main-menu-wrapper li:hover {
+  background-color: #bf0a30;
+}
+.header-logo-wrapper .main-menu-wrapper li:hover a {
+  color: #fff;
+}
+.header-logo-wrapper .main-menu-wrapper li a {
+  color: #bf0a30;
+  font-size: 16px;
 }
 .search-bar-wrapper {
   position: relative;
@@ -155,6 +164,16 @@ body button {
   font-size: 16px;
   opacity: 0.5;
   transition: opacity 0.1s linear;
+}
+.animation-wrapper .ahsu-banner {
+  position: absolute;
+  top: 36px;
+  right: 56px;
+}
+.animation-wrapper .ahsu-button {
+  position: absolute;
+  top: 36px;
+  right: 56px;
 }
 .btn-start-anim {
   position: absolute;
@@ -911,12 +930,34 @@ ahsu-step-list1-wrapper .ahsu-list-wrapper .ahsu-counter,
   }
 }
 
+ahsu-menu-banner1-wrapper,
+.ahsu-menu-banner1-wrapper {
+  position: relative;
+}
+ahsu-menu-banner1-wrapper a:hover,
+.ahsu-menu-banner1-wrapper a:hover {
+  text-decoration: none;
+}
+ahsu-menu-banner1-wrapper ul,
+.ahsu-menu-banner1-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ahsu-menu-banner1-wrapper ul li,
+.ahsu-menu-banner1-wrapper ul li {
+  display: inline-block;
+  margin: 0px 16px;
+  padding: 8px 0px;
+}
+ahsu-menu-banner1-wrapper ul li:hover,
+.ahsu-menu-banner1-wrapper ul li:hover {
+  border-bottom: 4px solid #f00;
+}
+
 ahsu-menu-popup1-wrapper,
 .ahsu-menu-popup1-wrapper {
-  position: absolute;
-  top: 36px;
-  right: 56px;
-  color: #000;
+  position: relative;
 }
 ahsu-menu-popup1-wrapper button,
 .ahsu-menu-popup1-wrapper button {
@@ -924,13 +965,13 @@ ahsu-menu-popup1-wrapper button,
   padding: 8px;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 ahsu-menu-popup1-wrapper button.ahsu-active,
 .ahsu-menu-popup1-wrapper button.ahsu-active,
 ahsu-menu-popup1-wrapper button:hover,
 .ahsu-menu-popup1-wrapper button:hover {
-  background-color: #f2f2f2;
+  background-color: #e8e8e8;
 }
 ahsu-menu-popup1-wrapper button img,
 .ahsu-menu-popup1-wrapper button img {
@@ -948,7 +989,7 @@ ahsu-menu-popup1-wrapper ul,
   padding: 0;
   background-color: #fff;
   border-radius: 12px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #e8e8e8;
   list-style: none;
   overflow: hidden;
   text-align: center;
@@ -967,9 +1008,15 @@ ahsu-menu-popup1-wrapper ul li,
   width: 100%;
   height: 48px;
   line-height: 48px;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
   cursor: pointer;
+}
+ahsu-menu-popup1-wrapper ul li:last-child,
+.ahsu-menu-popup1-wrapper ul li:last-child {
+  border-bottom: none;
 }
 ahsu-menu-popup1-wrapper ul li:hover,
 .ahsu-menu-popup1-wrapper ul li:hover {
-  background-color: #00f;
+  background-color: #e8e8e8;
 }

@@ -1,6 +1,6 @@
 .ahsu-menu-popup1-wrapper
-	button(ng-click="onShowMenu()")
+	button(ng-click="onShowMenu($event)")
 		img(ng-src="{{imgSrc}}")
 	ul
 		li(ng-repeat="item in items")
-			a(ng-href="item.href") {{item.title}}
+			a(ng-href="{{item.href}}") {{item.title}}
