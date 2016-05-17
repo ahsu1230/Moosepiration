@@ -1,0 +1,71 @@
+ahsu-ftue-outline1-wrapper
+.ahsu-ftue-outline1-wrapper
+	position: relative
+
+	& .ahsu-rectangular-overlay
+		position: fixed
+		width: 0px
+		height: 0px
+		background-color: rgba(0, 0, 0, 0.5)
+		opacity: 0.0
+
+		& .ahsu-highlighter
+			position: absolute
+			box-sizing: border-box
+			opacity: 0.0
+			transition: all linear 0.15s
+
+			&.ahsu-highlight
+				border: 2px solid red
+				opacity: 1.0
+
+		&.top-left-down
+			top: 0px
+			left: 0px
+
+			& .ahsu-highlighter
+				bottom: 0
+				right: 0
+
+		&.bottom-right-up
+			bottom: 0px
+			right: 0px
+
+			& .ahsu-highlighter
+				top: 0
+				left: 0
+
+		&.bottom-left-right
+			bottom: 0px
+			left: 0px
+
+			& .ahsu-highlighter
+				top: 0
+				right: 0
+
+		&.top-right-left
+			top: 0px
+			right: 0px
+
+			& .ahsu-highlighter
+				bottom: 0
+				left: 0
+
+	& .ahsu-ftue-description
+		position: absolute
+		top: 32px
+		right: 0
+		line-height: 32px
+		padding: 8px 16px
+		color: white
+		opacity: 0.0
+		visibility: hidden
+		transition: all linear 0.15s
+
+		& p
+			margin: 0px
+
+		&.ahsu-show
+			opacity: 1.0
+			visibility: visible
+		

@@ -4,36 +4,17 @@ html(lang="en")
 	head
 		title= Moosepiration
 		link(rel='stylesheet', href='out.css')
-		script(type='text/javascript', src='libs/jquery-2.2.3.min.js')
-		script(type='text/javascript', src='libs/lodash-v411-1.js')
-		script(type='text/javascript', src='libs/angular.min.js')
-		script(type='text/javascript', src="libs/angular-route.min.js")
-		script(type='text/javascript', src='js/route.js')
-		script(type='text/javascript', src='js/headerCtrl.js')
-		script(type='text/javascript', src='js/loadersCtrl.js')
-		script(type='text/javascript', src='js/menusCtrl.js')
-		script(type='text/javascript', src='js/ftueCtrl.js')
-		script(type='text/javascript', src='js/accordionsCtrl.js')
-
-		script(type='text/javascript', src='js/Loaders/spinner1.js')
-		script(type='text/javascript', src='js/Loaders/progressBar1.js')
-		script(type='text/javascript', src='js/Loaders/circleFiller.js')
-		script(type='text/javascript', src='js/Loaders/singlePulser1.js')
-		script(type='text/javascript', src='js/Loaders/linePulser1.js')
-		script(type='text/javascript', src='js/Loaders/profileProgress1.js')
-		script(type='text/javascript', src='js/Loaders/stepList1.js')
-
-		script(type='text/javascript', src='js/Menus/popup1.js')
-		script(type='text/javascript', src='js/Menus/banner1.js')
-
-		script(type='text/javascript', src='js/Accordions/rotatingArrow1.js')
-		script(type='text/javascript', src='js/Accordions/plusButton1.js')
-		script(type='text/javascript', src='js/Accordions/plusMinus1.js')
+		script(type='text/javascript', src='libs/all_libs.js')
+		script(type='text/javascript', src='js/main.js')
+		script(type='text/javascript', src='js/Loaders/loaders.js')
+		script(type='text/javascript', src='js/Menus/menus.js')
+		script(type='text/javascript', src='js/Accordions/accordions.js')
+		script(type='text/javascript', src='js/FTUE/ftue.js')
 
 	body(ng-app="myApp")
 		.header
 			.header-logo-wrapper(ng-controller="HeaderCtrl")
-				a(ng-href="#/") Moospiration
+				a(ng-href="#/") Moosepiration
 				ahsu-menu-popup1.main-menu-wrapper(items="links")
 
 		.view-wrapper(ng-view)

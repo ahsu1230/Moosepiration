@@ -1,0 +1,14 @@
+.view.ftue
+	.search-bar-wrapper
+		img.search-icon(src='icons/search-gray.png')
+		input(type='text' placeholder='Search for an animation' ng-model="query")
+
+	.main-content-wrapper(ng-repeat="anim in animations | filter:search")
+		.animation-wrapper
+			.title {{anim.title}}
+			button.btn-start-anim(ng-click="selectAnimation(anim)") Start
+			.description-wrapper(ng-click="extendDescription($event)") 
+				p {{anim.description}}
+
+	ahsu-ftue-outline1(highlights="highlights" ng-if="selectedAnimation.id=='outline1'")
+	ahsu-ftue-circle1(highlights="highlights" ng-if="selectedAnimation.id=='circle1'")

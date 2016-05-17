@@ -3,5 +3,4 @@
 		img(ng-src="{{imgSrc}}")
 	ul
 		a(ng-repeat="item in items" ng-href="{{item.href}}" ng-click="onLinkClick($event)")
-			li
-				{{item.title}}
+			li {{item.title}}

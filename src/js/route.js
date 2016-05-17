@@ -8,19 +8,19 @@ var app = angular.module('myApp', [
  */
 app.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.when("/", {
-        templateUrl: "templates/loaders.html",
+        templateUrl: "templates/Loaders/loaders.html",
         controller: "LoadersCtrl"
     }).when("/loaders", {
-        templateUrl: "templates/loaders.html",
+        templateUrl: "templates/Loaders/loaders.html",
         controller: "LoadersCtrl"
     }).when("/menus", {
-        templateUrl: "templates/menus.html",
+        templateUrl: "templates/Menus/menus.html",
         controller: "MenusCtrl"
     }).when("/ftue", {
-        templateUrl: "templates/ftue.html",
+        templateUrl: "templates/Ftue/ftue.html",
         controller: "FtueCtrl"
     }).when("/accordions", {
-        templateUrl: "templates/accordions.html",
+        templateUrl: "templates/Accordions/accordions.html",
         controller: "AccordionsCtrl"
     })
     .otherwise({
