@@ -8,6 +8,11 @@ app.directive("ahsuFtueOutline1", function() {
     },
     link: function(scope, elem, attrs) {
         scope.highlightIndex = 0;
+        var hasVScroll = window.innerHeight < document.body.offsetHeight;
+        var scrollWidth = 0;
+        if (hasVScroll) {
+          scrollWidth = 15;
+        }
 
         function extractHighlightProperties(highlight) {
           highlight.object = $(highlight.identifier);
@@ -52,14 +57,14 @@ app.directive("ahsuFtueOutline1", function() {
           bottomLeftRightOverlay.find('.ahsu-highlighter').width(totalHighlightWidth);
 
           bottomRightUpOverlay.animate({
-            width: window.innerWidth - rightX - 15 + 'px', // chrome scrollbar is 17px
+            width: window.innerWidth - rightX - scrollWidth + 'px',
             height: window.innerHeight - topY + 'px',
             opacity: 1.0
           }, timing);
           bottomRightUpOverlay.find('.ahsu-highlighter').height(totalHighlightHeight);
 
           topRightLeftOverlay.animate({
-            width: window.innerWidth - leftX - 15 + 'px', // chrome scrollbar is 17px
+            width: window.innerWidth - leftX - scrollWidth + 'px',
             height: topY + 'px',
             opacity: 1.0
           }, timing);

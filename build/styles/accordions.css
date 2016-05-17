@@ -1,0 +1,157 @@
+ahsu-accordion-plus-button1-wrapper,
+.ahsu-accordion-plus-button1-wrapper {
+  position: relative;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper:hover .ahsu-title,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper:hover .ahsu-title {
+  color: #00f;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend img,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend img {
+  transform: scale(0.8);
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-title,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-title {
+  color: #00f;
+}
+ahsu-accordion-plus-button1-wrapper img,
+.ahsu-accordion-plus-button1-wrapper img {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 16px;
+  transform: scale(1);
+  transition: all linear 0.15s;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-title,
+.ahsu-accordion-plus-button1-wrapper .ahsu-title {
+  display: inline-block;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-content,
+.ahsu-accordion-plus-button1-wrapper .ahsu-content {
+  height: 0px;
+  margin-top: 0px;
+  margin-left: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.15s;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-content.ahsu-show,
+.ahsu-accordion-plus-button1-wrapper .ahsu-content.ahsu-show {
+  height: 60px;
+  margin-top: 12px;
+  opacity: 1;
+  visibility: visible;
+}
+
+ahsu-accordion-plus-button1-wrapper,
+.ahsu-accordion-plus-button1-wrapper {
+  position: relative;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper:hover .ahsu-title,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper:hover .ahsu-title {
+  color: #00f;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-icon,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-icon {
+  background: url("../../icons/circle-minus.png");
+  background-size: cover;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-title,
+.ahsu-accordion-plus-button1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-title {
+  color: #00f;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-icon,
+.ahsu-accordion-plus-button1-wrapper .ahsu-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url("../../icons/circle-plus.png");
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 16px;
+  transition: all linear 0.15s;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-title,
+.ahsu-accordion-plus-button1-wrapper .ahsu-title {
+  display: inline-block;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-content,
+.ahsu-accordion-plus-button1-wrapper .ahsu-content {
+  height: 0px;
+  margin-top: 0px;
+  margin-left: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.15s;
+}
+ahsu-accordion-plus-button1-wrapper .ahsu-content.ahsu-show,
+.ahsu-accordion-plus-button1-wrapper .ahsu-content.ahsu-show {
+  height: 60px;
+  margin-top: 12px;
+  opacity: 1;
+  visibility: visible;
+}
+
+ahsu-accordion-rotating-arrow1-wrapper,
+.ahsu-accordion-rotating-arrow1-wrapper {
+  position: relative;
+}
+ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper,
+.ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper:hover .ahsu-title,
+.ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper:hover .ahsu-title {
+  color: #00f;
+}
+ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper.ahsu-extend img,
+.ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper.ahsu-extend img {
+  transform: rotate(90deg);
+}
+ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-title,
+.ahsu-accordion-rotating-arrow1-wrapper .ahsu-accordion-wrapper.ahsu-extend .ahsu-title {
+  color: #00f;
+}
+ahsu-accordion-rotating-arrow1-wrapper img,
+.ahsu-accordion-rotating-arrow1-wrapper img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 16px;
+  transform: rotate(0deg);
+  transition: all linear 0.15s;
+}
+ahsu-accordion-rotating-arrow1-wrapper .ahsu-title,
+.ahsu-accordion-rotating-arrow1-wrapper .ahsu-title {
+  display: inline-block;
+}
+ahsu-accordion-rotating-arrow1-wrapper .ahsu-content,
+.ahsu-accordion-rotating-arrow1-wrapper .ahsu-content {
+  height: 0px;
+  margin-top: 0px;
+  margin-left: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.15s;
+}
+ahsu-accordion-rotating-arrow1-wrapper .ahsu-content.ahsu-show,
+.ahsu-accordion-rotating-arrow1-wrapper .ahsu-content.ahsu-show {
+  height: 60px;
+  margin-top: 12px;
+  opacity: 1;
+  visibility: visible;
+}
