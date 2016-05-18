@@ -25,22 +25,22 @@ app.directive("ahsuFtueOutline1", function() {
         function renderHighlight() {
           var highlight = scope.highlights[scope.highlightIndex];
           extractHighlightProperties(highlight);
-
-          var topLeftDownOverlay = $(elem.find('.ahsu-rectangular-overlay.top-left-down'));
-          var bottomRightUpOverlay = $(elem.find('.ahsu-rectangular-overlay.bottom-right-up'));
-          var bottomLeftRightOverlay = $(elem.find('.ahsu-rectangular-overlay.bottom-left-right'));
-          var topRightLeftOverlay = $(elem.find('.ahsu-rectangular-overlay.top-right-left'));
           var paddingH = highlight.paddingH;
           var paddingV = highlight.paddingV;
-          var borderThickness = 4;
-          var timing = 500;
 
           var topY = highlight.top - paddingV;
           var bottomY = highlight.top + highlight.height + paddingV;
           var leftX = highlight.left - paddingH;
           var rightX = highlight.left + highlight.width + paddingH;
+          var borderThickness = 4;
           var totalHighlightWidth = highlight.width + paddingH * 2 + borderThickness;
           var totalHighlightHeight = highlight.height + paddingV * 2 + borderThickness;
+          var timing = 500;
+
+          var topLeftDownOverlay = $(elem.find('.ahsu-rectangular-overlay.top-left-down'));
+          var bottomRightUpOverlay = $(elem.find('.ahsu-rectangular-overlay.bottom-right-up'));
+          var bottomLeftRightOverlay = $(elem.find('.ahsu-rectangular-overlay.bottom-left-right'));
+          var topRightLeftOverlay = $(elem.find('.ahsu-rectangular-overlay.top-right-left'));
 
           topLeftDownOverlay.animate({
             width: leftX + 'px',
@@ -104,6 +104,7 @@ app.directive("ahsuFtueOutline1", function() {
         }
 
         function startHighlights() {
+          scope.highlightIndex = 0;
           scrollToHighlight();
           renderHighlight();
           $(document).keyup(onKeyPressHighlightsStarted);
@@ -124,9 +125,11 @@ app.directive("ahsuFtueOutline1", function() {
             $(elem.find('.ahsu-rectangular-overlay.top-right-left'))
           ];
           for (var i = 0; i < overlays.length; i++) {
-            overlays[i].width = '0px';
-            overlays[i].height = '0px';
-            overlays[i].css({'opacity' : '0.0'});
+            overlays[i].css({
+              'width' : '0px',
+              'height' : '0px',
+              'opacity' : '0.0'
+            });
             overlays[i].find('.ahsu-highlighter').removeClass('ahsu-highlight');
           }
 

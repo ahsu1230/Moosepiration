@@ -1,3 +1,6 @@
+colorLightBlue = #5496ff
+colorLightGreen = #6fd36b
+
 ahsu-progress-bar2-wrapper
 .ahsu-progress-bar2-wrapper
 	position: relative
@@ -33,14 +36,18 @@ ahsu-progress-bar2-wrapper
 			& .ahsu-progress
 				width: 0%
 				height: 24px
-				background-color: #6fd36b
+				background: colorLightBlue
+				transition: background 0.15s linear
+
+				&.ahsu-complete
+					background: colorLightGreen
 
 
 @keyframes ahsu-progress-bar2-highlight {
 	50% {
-		box-shadow: 0px 0px 2px 2px #6fd36b
+		box-shadow: 0px 0px 2px 2px colorLightGreen
 	}
 	100% {
-		box-shadow: 0px 0px 0px 0px #6fd36b
+		box-shadow: 0px 0px 0px 0px colorLightGreen
 	}
 }

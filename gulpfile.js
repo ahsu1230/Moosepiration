@@ -182,7 +182,6 @@ gulp.task('accordions-jade', function() {
 });
 
 gulp.task('ftue-jade', function() {
-
   return gulp.src('src/templates/Ftue/*.jade')
     .pipe(jade())
     .pipe(gulp.dest('build/templates/Ftue'))
